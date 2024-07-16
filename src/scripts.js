@@ -7,7 +7,10 @@ const options = {
     }
 }
 
-async function getTheData () {
+const searchInput = document.getElementById("city")
+const searchBtn = document.getElementById("search")
+
+async function getTheData(searchInput) {
 
     try {
         const res = await fetch(api, options)
@@ -20,7 +23,7 @@ async function getTheData () {
     
 }
 
-getTheData()
 
-const searchInput = document.getElementById("city")
-const searchBtn = document.getElementById("search")
+searchBtn.addEventListener("click", () => {
+    getTheData(searchInput.value)
+})
