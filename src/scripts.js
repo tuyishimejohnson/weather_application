@@ -13,5 +13,4 @@ async function getTheData () {
     
 }
 
-
-console.log(getTheData())
+getTheData()
