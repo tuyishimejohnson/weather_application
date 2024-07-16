@@ -8,6 +8,7 @@ const options = {
 }
 
 async function getTheData () {
+
     try {
         const res = await fetch(api, options)
         const data = await res.json()
@@ -20,3 +21,6 @@ async function getTheData () {
 }
 
 getTheData()
+
+const searchInput = document.getElementById("city")
+const searchBtn = document.getElementById("search")
