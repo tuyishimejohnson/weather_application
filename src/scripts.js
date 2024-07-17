@@ -1,21 +1,23 @@
-const api = 'https://open-weather13.p.rapidapi.com/city/Kigali/EN'
-const options = {
-    method: "GET",
-    headers: {
-        'x-rapidapi-key': 'f56de56508mshd0bfd5041a309a9p1b173djsnd3577aa851d9',
-		'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
-    }
-}
 
-const searchInput = document.getElementById("city")
+/* const city = document.getElementById("city").value
 const searchBtn = document.getElementById("search")
+const section = document.getElementById("section")
+ */
 
-async function getTheData(searchInput) {
+
+const api = "https://www.healthcare.gov/api/index.json";
+
+
+
+async function getTheData() {
 
     try {
-        const res = await fetch(api, options)
+        const res = await fetch(api)
         const data = await res.json()
         console.log(data)
+        /* let newEle = document.createElement("p")
+        newEle.textContent = JSON.stringify(data)
+        section.appendChild(newEle) */
 
     } catch (error) {
         console.log(`${error} is the error.`)
@@ -24,6 +26,15 @@ async function getTheData(searchInput) {
 }
 
 
-searchBtn.addEventListener("click", () => {
-    getTheData(searchInput.value)
+getTheData()
+
+
+/* searchBtn.addEventListener("click", () => {
+    getTheData()
 })
+ */
+
+
+
+
+
