@@ -1,4 +1,3 @@
-import { useState } from "react"
 import data from "./data"
 import { NavLink, useSearchParams } from "react-router-dom"
 
@@ -8,10 +7,6 @@ import { NavLink, useSearchParams } from "react-router-dom"
 
 
 const Cards = () => {
-
-    const myStyles = {
-        backgroundColor:"gray"
-    }
 
     const [searchParams, setSearchParams] = useSearchParams()
     const typeFilter = searchParams.get("type")
