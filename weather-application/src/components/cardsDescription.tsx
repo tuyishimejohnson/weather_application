@@ -25,7 +25,7 @@ const CardsDescription = () => {
                     <h1 className="text-2xl font-bold">{x.title}</h1>
                     <p>{x.description}</p>
             </div>}
-        
+                
     </>
   )
 }

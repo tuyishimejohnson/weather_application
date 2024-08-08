@@ -1,5 +1,6 @@
+import { useState } from "react"
 import data from "./data"
-import { NavLink } from "react-router-dom"
+import { NavLink, useSearchParams } from "react-router-dom"
 
 
 let result = data.map(char => (
@@ -7,6 +8,7 @@ let result = data.map(char => (
         <NavLink to={`/Cards/${char.id}`}>
             <img src={char.imagePath} className="h-56 w-72 object-cover bg-black shadow-gray-300 shadow-md rounded-md" alt="Images devices" />
             <h1 className="text-2xl font-bold">{char.title}</h1>
+            <span className={`${char.category.toLowerCase() === "cheap" ? "bg-gray-600 py-1 px-2 rounded text-white" : "bg-green-500 py-1 px-2 rounded text-white"}`}>{char.category}</span>
             <p>{char.description}</p>
         </NavLink>
     </div>
@@ -15,6 +17,12 @@ let result = data.map(char => (
 
 
 const Cards = () => {
+
+    const [searchParams, setSearchParams] = useSearchParams()
+    const [data, setData] = useState([])
+    const typeFilter = searchParams.get("type")
+    console.log(typeFilter)
+
   return (
 
     <div className="w-2/5 m-auto">

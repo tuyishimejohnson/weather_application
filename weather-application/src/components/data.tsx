@@ -8,7 +8,8 @@ export interface Description {
     id:number,
     title:string,
     description:string,
-    imagePath:string
+    imagePath:string,
+    category:string
 }
 
 const myData:Description[] = [
@@ -16,25 +17,29 @@ const myData:Description[] = [
         id: 1,
         title: "Device One",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt mollitia corporis voluptas ullam doloremque cum sequi quas facere exercitationem. Reprehenderit possimus facilis cupiditate, totam ad distinctio et voluptate deleniti itaque.",
-        imagePath: image1
+        imagePath: image1,
+        category: "Cheap"
     },
     {
         id: 2,
         title: "Device Two",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt mollitia corporis voluptas ullam doloremque cum sequi quas facere exercitationem. Reprehenderit possimus facilis cupiditate, totam ad distinctio et voluptate deleniti itaque.",
-        imagePath: image2
+        imagePath: image2,
+        category: "Moderate"
     },
     {
         id: 3,
         title: "Device Three",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt mollitia corporis voluptas ullam doloremque cum sequi quas facere exercitationem. Reprehenderit possimus facilis cupiditate, totam ad distinctio et voluptate deleniti itaque.",
-        imagePath: image3
+        imagePath: image3,
+        category: "Moderate"
     },
     {
         id: 4,
         title: "Device Four",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt mollitia corporis voluptas ullam doloremque cum sequi quas facere exercitationem. Reprehenderit possimus facilis cupiditate, totam ad distinctio et voluptate deleniti itaque.",
-        imagePath: image4
+        imagePath: image4,
+        category: "Cheap"
     }
 ]
 
