@@ -14,12 +14,11 @@ const Cards = () => {
     }
 
     const [searchParams, setSearchParams] = useSearchParams()
-    const [myData, setMyData] = useState(data)
     const typeFilter = searchParams.get("type")
     console.log(typeFilter)
 
 
-    let result = myData.filter(item => typeFilter ? item.type.toLowerCase() === typeFilter : item).map(char => (
+    let result = data.filter(item => typeFilter ? item.type.toLowerCase() === typeFilter : item).map(char => (
         <div key={char.id} className="flex flex-col">
             <NavLink to={`/Cards/${char.id}`}>
                 <img src={char.imagePath} className="h-56 w-72 object-cover bg-black shadow-gray-300 shadow-md rounded-md" alt="Images devices" />
@@ -38,6 +37,11 @@ const Cards = () => {
         <NavLink to={"?type=cheap"} >Cheap</NavLink>
         <NavLink to={"?type=moderate"}>Moderate</NavLink>
         <NavLink to={""}>Go back</NavLink>
+
+        <button onClick={() => setSearchParams("?type=cheap")}>Cheap</button>
+        <button onClick={() => setSearchParams("?type=moderate")}>Moderate</button>
+        <button onClick={() => setSearchParams("")}>Go back</button>
+        
 
         <h1 className="flex justify-center text-3xl font-semibold">These are the cards</h1>
         <div className=" grid grid-cols-2 gap-5 px-3 py-5 border border-gray-200">
