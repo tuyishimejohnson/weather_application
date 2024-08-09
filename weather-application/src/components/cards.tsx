@@ -1,5 +1,6 @@
+
+import { NavLink, RouterProvider, useSearchParams } from "react-router-dom"
 import data from "./data"
-import { NavLink, useSearchParams } from "react-router-dom"
 
 
 

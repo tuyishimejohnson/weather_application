@@ -21,6 +21,7 @@ const Layout = () => {
     <div>
       <nav className= "w-2/5 m-auto text-center">
           <NavLink to="/Cards" style={({isActive}) => isActive ? styles : undefined}>Navigate to Cards</NavLink>
+          <NavLink to="/DisplayData">Display data</NavLink>
       </nav>
 
       <main>
