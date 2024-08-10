@@ -6,6 +6,7 @@ import DisplayData from './components/displayData'
 import Layout from './components/Layout'
 import FetchedData from './components/fetchedData'
 import Error from './components/Error'
+import Locations from './components/locations'
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
 
