@@ -5,6 +5,7 @@ import CardsDescription from './components/cardsDescription'
 import DisplayData from './components/displayData'
 import Layout from './components/Layout'
 import FetchedData from './components/fetchedData'
+import Error from './components/Error'
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
 
@@ -15,7 +16,7 @@ function App() {
         <Route path='/' element={< Layout />}>
             <Route path='*' element={<Page404 />}/>
             <Route path='Cards' element={< Cards />}/>
-            <Route path='DisplayData' element={< DisplayData />} loader={FetchedData}/>
+            <Route path='DisplayData' element={< DisplayData />} loader={FetchedData} errorElement={< Error />}/>
             <Route path='Cards/:id' element={< CardsDescription />}/>
         </Route>
     )
