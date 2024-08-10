@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import Locations from './locations'
+import About from './About'
 
 const Layout = () => {
 
@@ -23,6 +24,7 @@ const Layout = () => {
       <nav className= "w-2/5 m-auto text-center">
           <NavLink to="/Cards" style={({isActive}) => isActive ? styles : undefined}>Navigate to Cards</NavLink>
           <NavLink to="/DisplayData">Display data</NavLink>
+          <NavLink to="About">About</NavLink>
           
       </nav>
   

@@ -6,7 +6,7 @@ import DisplayData from './components/displayData'
 import Layout from './components/Layout'
 import FetchedData from './components/fetchedData'
 import Error from './components/Error'
-import Locations from './components/locations'
+import About from './components/About'
 
 import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route } from 'react-router-dom'
 
@@ -19,6 +19,7 @@ function App() {
             <Route path='Cards' element={< Cards />}/>
             <Route path='DisplayData' element={< DisplayData />} loader={FetchedData} errorElement={< Error />}/>
             <Route path='Cards/:id' element={< CardsDescription />}/>
+            <Route path='About' element={< About />}/>
         </Route>
     )
 
